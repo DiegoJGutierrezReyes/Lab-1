@@ -75,6 +75,7 @@ Para resolver el ejercicio, basta con implementar la operación dada con suma (+
   #Se imprime el resultado
   
   print("el valor de la operación es", suma)
+  
 
   ![ejercicio 1](https://github.com/DiegoJGutierrezReyes/Lab-1/assets/132300202/a110b27d-3a09-4d9c-8b53-b4862e6c3930)
 
@@ -92,6 +93,7 @@ La paga correspondiente se hace multiplicando el número de horas trabajadas por
   total = horas * costo
   
   print("El costo del empleado es: ", total)
+  
 
 ![ejercicio2](https://github.com/DiegoJGutierrezReyes/Lab-1/assets/132300202/4e926ba1-1a20-4433-af28-6af259dba4dc)
 
@@ -128,8 +130,11 @@ Para la generación de las listas es necesario implementar vectores, sin definir
   for i in range(n):
       Lista.append(list_nombres[i] + "  $" + str(list_salario[i]))
   print(Lista)
+  
 
   ![ejercicio3_1](https://github.com/DiegoJGutierrezReyes/Lab-1/assets/132300202/9864d3fe-8777-4c2e-85de-08676f03c2cc)
+
+  
   ![ejercicio3_2](https://github.com/DiegoJGutierrezReyes/Lab-1/assets/132300202/b7b7e17d-969c-4756-a138-62a5f4d1597f)
 
 
@@ -192,6 +197,7 @@ Para generar el tamño de la lista, se pedirá al usuario ingresar un número ma
         else:
             print(numI[i], ")", " = " ,end="")
     print(producto)
+    
 
     ![ejercicio4](https://github.com/DiegoJGutierrezReyes/Lab-1/assets/132300202/c5bd0395-c62f-4015-8308-b638e37503ac)
 
@@ -228,6 +234,7 @@ Lo primeroe s crear el rango de valores, posteriormente se pedirá al usuario in
     print("El número secreto era", a)
     print("Número de intentos: ", intentos)
 
+
     ![ejercicio5](https://github.com/DiegoJGutierrezReyes/Lab-1/assets/132300202/c93b15af-3040-4d1f-83ef-eed06f8be46c)
 
 
@@ -248,27 +255,34 @@ o X X X o
 
 Para resolver el ejercicio, y emplear un comando más ordenado, se harpa uso de la creación de varias funciones, esto para llamarlas al código principal, la primera función es la de buscar, en la cual se creará la matriz que será el mapa que el robot tendrá que completar.
 
+
 ![image](https://github.com/DiegoJGutierrezReyes/Lab-1/assets/132300202/78d358f6-1311-4718-a9c7-dd2a5346b5c3)
 
 Posteriormente se define el movimiento para cada una de las direcciones que el robot puede tomar, es decir, para derecha, abajo, izquierda o arriba, cada dirección se define en una función diferente. La estructura es muy similar entre ellas, puesto que define un movimiento que realiza el robot, las diferencias entre las 4 secciones radica en el símbolo que se imprimirá, dicho simbolo muestra el camino que se toma, siendo ->, V. <- y A respectivamente, además, para cada movimiento se deja la opción de regresar a la posición anterior, esto para cuando choque con algún obstáculo:
+
 
 ![image](https://github.com/DiegoJGutierrezReyes/Lab-1/assets/132300202/dbf3b2e8-be8d-4946-964d-54381615a04f)
 
 El siguiente paso es la creación de la función "buscar" este se encargará de trazar la ruta para el destino, se realiza mediante la aplicación de comandos if, los cuales harán que en caso de que la condición sea diferente a un obstáculo (X) se avance en esa casilla, y en caso de que la condición se cumpla, mandará a retroceder al robot, este proceso se aplica para las 4 direcciones, probando primeramente para abajo, después a la izquierda, luego hacia arriba y al final a la derecha. Parte de esta función se observa a continuación:
 
+
 ![image](https://github.com/DiegoJGutierrezReyes/Lab-1/assets/132300202/eea544c8-2e94-4534-be56-0008e453bd15)
 
 Establecidas las funciones se crea el código principal, definiendo que existe una matriz de tamaño 5x5, y que habrá, como máximo 10 obstáculos, lo primero es crear la matriz sin obstáculos, y despué sagregarlos de forma aleatoria, esto permite la creación de un mapa diferente cada vez que se ejecute el código:
+
 
 ![image](https://github.com/DiegoJGutierrezReyes/Lab-1/assets/132300202/73d972ee-3d98-4e64-96ca-43abfcb4537c)
 
 Una vez creado el mapa, se procede a la resolución del mismo, esto se hace empleando un while hasta llegar a la meta, y llamando a las funciones de movimientos, de modo que se prueba una por una hasta llegar al destino establecido, posterioemnte se imprime el mapa con la ruta trazada, lo que refleja los simbolos que marcan la ruta que el robot siguio.
 
+
 ![image](https://github.com/DiegoJGutierrezReyes/Lab-1/assets/132300202/ab4d76a8-7c6d-486d-9d75-ccadca666843)
 
 Se muestran dos ejecuciones del código para mostrar que en cada ejecución se tiene una ruta diferente:
 
+
 ![image](https://github.com/DiegoJGutierrezReyes/Lab-1/assets/132300202/b81f3f02-93cc-417f-9861-cdc1e4882c79)
+
 
 ![image](https://github.com/DiegoJGutierrezReyes/Lab-1/assets/132300202/f6c2a506-3acc-40dc-80d2-fbe242de75f8)
 
