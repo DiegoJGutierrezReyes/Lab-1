@@ -76,7 +76,8 @@ Para resolver el ejercicio, basta con implementar la operación dada con suma (+
   
   print("el valor de la operación es", suma)
 
-  
+  ![ejercicio 1](https://github.com/DiegoJGutierrezReyes/Lab-1/assets/132300202/a110b27d-3a09-4d9c-8b53-b4862e6c3930)
+
    
 **2) Escribir un programa que pregunte al usuario por el número de horas trabajadas y el costo por hora. Después debe mostrar por pantalla la paga que le corresponde.**
 
@@ -92,6 +93,7 @@ La paga correspondiente se hace multiplicando el número de horas trabajadas por
   
   print("El costo del empleado es: ", total)
 
+![ejercicio2](https://github.com/DiegoJGutierrezReyes/Lab-1/assets/132300202/4e926ba1-1a20-4433-af28-6af259dba4dc)
 
 
    
@@ -125,6 +127,11 @@ Para la generación de las listas es necesario implementar vectores, sin definir
   for i in range(n):
       Lista.append(list_nombres[i] + "  $" + str(list_salario[i]))
   print(Lista)
+
+  ![ejercicio3_1](https://github.com/DiegoJGutierrezReyes/Lab-1/assets/132300202/9864d3fe-8777-4c2e-85de-08676f03c2cc)
+  ![ejercicio3_2](https://github.com/DiegoJGutierrezReyes/Lab-1/assets/132300202/b7b7e17d-969c-4756-a138-62a5f4d1597f)
+
+
 
 **4) Crea una lista llamada numeros que contenga al menos 10 números. Calcula el promedio de los números pares y el producto de los números impares. Imprime los resultados.**
 
@@ -185,6 +192,9 @@ Para generar el tamño de la lista, se pedirá al usuario ingresar un número ma
             print(numI[i], ")", " = " ,end="")
     print(producto)
 
+    ![ejercicio4](https://github.com/DiegoJGutierrezReyes/Lab-1/assets/132300202/c5bd0395-c62f-4015-8308-b638e37503ac)
+
+
 **5) Crea un programa que solicite al usuario adivinar un número secreto. El programa debe generarun número aleatorio entre 1 y 10, y el usuario debe intentar adivinarlo. El programa debe proporcionar pistas si el número ingresado por el usuario es demasiado alto o bajo. El bucle while debe continuar hasta que el usuario adivine correctamente. Al final se debe imprimir en cuantos intentos el usuario logró adivinar el número.**
 
 Lo primeroe s crear el rango de valores, posteriormente se pedirá al usuario ingresar un valor para ver si lo adivinó, se realiza la comparación entre el número secreto y el valor introducido por el usuario, si este es diferente se dará por incorrecto el intento y se comparará con la respuesta correcta, esto para determinar si se trata de un valor mayor o menor, de modo que sea una ayuda para el usuario, este proceso se repetirá de maenra indefinida hasta que el usuario logre acertar el número, cuando lo adivine se romperá el bucle creado y se felicitará al usuario, mostrando además el número de intentos que le costó adivinar.
@@ -216,6 +226,9 @@ Lo primeroe s crear el rango de valores, posteriormente se pedirá al usuario in
     print("¡¡¡¡¡¡FELICIDADES!!!!!")
     print("El número secreto era", a)
     print("Número de intentos: ", intentos)
+
+    ![ejercicio5](https://github.com/DiegoJGutierrezReyes/Lab-1/assets/132300202/c93b15af-3040-4d1f-83ef-eed06f8be46c)
+
 
 **6) Robot explorador: El programa debe generar una matriz de al menos 5x5. El robot inicia su camino en la posición (0,0) de la matriz y debe salir en la posición (4,4) o la máxima posición si se cambia el tamaño de matriz. El numero y la posición de los obstáculos es aleatoria. El robot solo puede avanzar, girar a la izquierda o a la derecha para buscar un camino libre, en el eventual caso que el robot no pueda salir debe imprimir en pantalla “Imposible llegar al destino”. En caso de que el robot llegue a su destino final deberá imprimir el mapa, con los espacios libres yobstáculos de la siguiente forma:
 X obstáculo o libre.**
