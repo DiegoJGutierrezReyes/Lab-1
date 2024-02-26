@@ -112,6 +112,7 @@ Para la generación de las listas es necesario implementar vectores, sin definir
 
   #Se crea un for que se repetirá las mismas veces que el tamaño del vectores
   #Se solicitan el nombre, costo y horas trabajadas de cada empleado
+  
   for i in range(n):
       nombre = str(input("Ingrese el nombre del empleado: "))
       costo = float(input("Ingrese el costo por hora del empelado: "))
@@ -245,9 +246,33 @@ o X X X o
 
 **Deberá imprimir también la ruta que siguió. Mostrar un segundo mapa con el “camino” seguido por el robot mediante flechas**
 
-Para resolver el ejercicio, lo primero es crear una matriz, esta se define con el uso de 2 variables "i" y "j".
+Para resolver el ejercicio, y emplear un comando más ordenado, se harpa uso de la creación de varias funciones, esto para llamarlas al código principal, la primera función es la de buscar, en la cual se creará la matriz que será el mapa que el robot tendrá que completar.
 
 ![image](https://github.com/DiegoJGutierrezReyes/Lab-1/assets/132300202/78d358f6-1311-4718-a9c7-dd2a5346b5c3)
+
+Posteriormente se define el movimiento para cada una de las direcciones que el robot puede tomar, es decir, para derecha, abajo, izquierda o arriba, cada dirección se define en una función diferente. La estructura es muy similar entre ellas, puesto que define un movimiento que realiza el robot, las diferencias entre las 4 secciones radica en el símbolo que se imprimirá, dicho simbolo muestra el camino que se toma, siendo ->, V. <- y A respectivamente, además, para cada movimiento se deja la opción de regresar a la posición anterior, esto para cuando choque con algún obstáculo:
+
+![image](https://github.com/DiegoJGutierrezReyes/Lab-1/assets/132300202/dbf3b2e8-be8d-4946-964d-54381615a04f)
+
+El siguiente paso es la creación de la función "buscar" este se encargará de trazar la ruta para el destino, se realiza mediante la aplicación de comandos if, los cuales harán que en caso de que la condición sea diferente a un obstáculo (X) se avance en esa casilla, y en caso de que la condición se cumpla, mandará a retroceder al robot, este proceso se aplica para las 4 direcciones, probando primeramente para abajo, después a la izquierda, luego hacia arriba y al final a la derecha. Parte de esta función se observa a continuación:
+
+![image](https://github.com/DiegoJGutierrezReyes/Lab-1/assets/132300202/eea544c8-2e94-4534-be56-0008e453bd15)
+
+Establecidas las funciones se crea el código principal, definiendo que existe una matriz de tamaño 5x5, y que habrá, como máximo 10 obstáculos, lo primero es crear la matriz sin obstáculos, y despué sagregarlos de forma aleatoria, esto permite la creación de un mapa diferente cada vez que se ejecute el código:
+
+![image](https://github.com/DiegoJGutierrezReyes/Lab-1/assets/132300202/73d972ee-3d98-4e64-96ca-43abfcb4537c)
+
+Una vez creado el mapa, se procede a la resolución del mismo, esto se hace empleando un while hasta llegar a la meta, y llamando a las funciones de movimientos, de modo que se prueba una por una hasta llegar al destino establecido, posterioemnte se imprime el mapa con la ruta trazada, lo que refleja los simbolos que marcan la ruta que el robot siguio.
+
+![image](https://github.com/DiegoJGutierrezReyes/Lab-1/assets/132300202/ab4d76a8-7c6d-486d-9d75-ccadca666843)
+
+Se muestran dos ejecuciones del código para mostrar que en cada ejecución se tiene una ruta diferente:
+
+![image](https://github.com/DiegoJGutierrezReyes/Lab-1/assets/132300202/b81f3f02-93cc-417f-9861-cdc1e4882c79)
+
+![image](https://github.com/DiegoJGutierrezReyes/Lab-1/assets/132300202/f6c2a506-3acc-40dc-80d2-fbe242de75f8)
+
+
 
 
 
