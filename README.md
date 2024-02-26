@@ -61,15 +61,19 @@ Para definir las variables que se emplearán durante un código, se usan diferen
 Para resolver el ejercicio, basta con implementar la operación dada con suma (+), multiplicación (*) y división (/), antes de esta operación se debe solicitar al usuario el valor del número "n", al final del código debe de imprimirse el resultado.
 
   #La biblioteca numpy permite la creación de vectores y matrices
+  
   import numpy
-
+  
   #Se solicita al usuario el valor de n en la ecuación dada
+  
   n = int(input("Introduzca el valor de n "))
 
   #Se realiza la operación
+  
   suma = n*(n+1)/2
 
   #Se imprime el resultado
+  
   print("el valor de la operación es", suma)
 
   
@@ -79,9 +83,13 @@ Para resolver el ejercicio, basta con implementar la operación dada con suma (+
 La paga correspondiente se hace multiplicando el número de horas trabajadas por el costo de cada hora, al tratarse de valores que pueden ser decimales, se ocupasn variables float, en lugar de enteros, lo siguiente es realizar la multiplicación entre los dos valores y multiplicar el resultado.
 
   #Se solicita al usuario el número de horas trabajadas, así como el costp (salario) por horashoras = float(input("Horas trabajadas "))
+  
   horas = float(input("Las horas trabajadas por el empleado son: "))
+  
   costo = float(input("El costo por hora del empleado es: "))
+  
   total = horas * costo
+  
   print("El costo del empleado es: ", total)
 
 
@@ -210,14 +218,19 @@ Lo primeroe s crear el rango de valores, posteriormente se pedirá al usuario in
     print("Número de intentos: ", intentos)
 
 **6) Robot explorador: El programa debe generar una matriz de al menos 5x5. El robot inicia su camino en la posición (0,0) de la matriz y debe salir en la posición (4,4) o la máxima posición si se cambia el tamaño de matriz. El numero y la posición de los obstáculos es aleatoria. El robot solo puede avanzar, girar a la izquierda o a la derecha para buscar un camino libre, en el eventual caso que el robot no pueda salir debe imprimir en pantalla “Imposible llegar al destino”. En caso de que el robot llegue a su destino final deberá imprimir el mapa, con los espacios libres yobstáculos de la siguiente forma:
-X obstáculo o libre
+X obstáculo o libre.**
+
 o o o X o
+
 o o o o o
+
 o o o o X
+
 o o o o o
+
 o X X X o 
 
-Deberá imprimir también la ruta que siguió. Mostrar un segundo mapa con el “camino” seguido por el robot mediante flechas**
+**Deberá imprimir también la ruta que siguió. Mostrar un segundo mapa con el “camino” seguido por el robot mediante flechas**
 
 
 
