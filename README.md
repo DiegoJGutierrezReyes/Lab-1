@@ -57,6 +57,7 @@ Para definir las variables que se emplearán durante un código, se usan diferen
 **Problemas a resolver**
 
 **1) Escribir un programa que lea un entero positivo “n” introducido por el usuario y después muestreen pantalla la suma de todos los enteros desde 1 hasta n . La suma de los primeros enterospositivos puede ser calculada de la siguiente forma.**
+
 Para resolver el ejercicio, basta con implementar la operación dada con suma (+), multiplicación (*) y división (/), antes de esta operación se debe solicitar al usuario el valor del número "n", al final del código debe de imprimirse el resultado.
 
   #La biblioteca numpy permite la creación de vectores y matrices
@@ -74,6 +75,7 @@ Para resolver el ejercicio, basta con implementar la operación dada con suma (+
   
    
 **2) Escribir un programa que pregunte al usuario por el número de horas trabajadas y el costo por hora. Después debe mostrar por pantalla la paga que le corresponde.**
+
 La paga correspondiente se hace multiplicando el número de horas trabajadas por el costo de cada hora, al tratarse de valores que pueden ser decimales, se ocupasn variables float, en lugar de enteros, lo siguiente es realizar la multiplicación entre los dos valores y multiplicar el resultado.
 
   #Se solicita al usuario el número de horas trabajadas, así como el costp (salario) por horashoras = float(input("Horas trabajadas "))
@@ -86,6 +88,7 @@ La paga correspondiente se hace multiplicando el número de horas trabajadas por
 
    
 **3) Crea una lista de nombre + sueldo por hora + horas trabajadas de al menos seis operadores. Imprime el nombre y el sueldo a pagar de cada operador.**
+
 Para la generación de las listas es necesario implementar vectores, sin definir su tamaño, dado que el usuario podrá decidir el tamaño de cada vector,  especificado el tamaño que tendrán las listas, se implementará una repetición de introducción de datos, de modo que puedan ingresarse el nombre, costo y horas trabajadas para cada usuario, los datos del nombre y el sueldo a pagar se implementarán en otra lista, la cual se imprimirá al final para obtener la información de todos los empleados.
 
   #Se solicita el núero de empleados
@@ -116,6 +119,7 @@ Para la generación de las listas es necesario implementar vectores, sin definir
   print(Lista)
 
 **4) Crea una lista llamada numeros que contenga al menos 10 números. Calcula el promedio de los números pares y el producto de los números impares. Imprime los resultados.**
+
 Para generar el tamño de la lista, se pedirá al usuario ingresar un número mayor a 10, de modo que se cree un rango entre el 1 y el valor dado por el usuario, a partir de esto se harán 2 vectores, uno para los números pares y otro para los impares, luego se realizará un proceso para discenir en que vector colocar cada uno de los números, para ello puede implementarse una división entre 2, puesto que los pares nunca tendrán residuo, mientras que los impares lo tendrán, almacenados los números en sus listas correspondientes, se realizan los procesos del promedio y la multiplicación, sumando y multiplicando los valores respectivos a cada lista, teniendo en consideración que lel resultado de la suma de los pares se dividirá entre el tamaño del vector para obtener el promedio.
 
     import numpy
@@ -174,7 +178,8 @@ Para generar el tamño de la lista, se pedirá al usuario ingresar un número ma
     print(producto)
 
 **5) Crea un programa que solicite al usuario adivinar un número secreto. El programa debe generarun número aleatorio entre 1 y 10, y el usuario debe intentar adivinarlo. El programa debe proporcionar pistas si el número ingresado por el usuario es demasiado alto o bajo. El bucle while debe continuar hasta que el usuario adivine correctamente. Al final se debe imprimir en cuantos intentos el usuario logró adivinar el número.**
-lo primeroe s crear el rango de valores, posteriormente se pedirá al usuario ingresar un valor para ver si lo adivinó, se realiza la comparación entre el número secreto y el valor introducido por el usuario, si este es diferente se dará por incorrecto el intento y se comparará con la respuesta correcta, esto para determinar si se trata de un valor mayor o menor, de modo que sea una ayuda para el usuario, este proceso se repetirá de maenra indefinida hasta que el usuario logre acertar el número, cuando lo adivine se romperá el bucle creado y se felicitará al usuario, mostrando además el número de intentos que le costó adivinar.
+
+Lo primeroe s crear el rango de valores, posteriormente se pedirá al usuario ingresar un valor para ver si lo adivinó, se realiza la comparación entre el número secreto y el valor introducido por el usuario, si este es diferente se dará por incorrecto el intento y se comparará con la respuesta correcta, esto para determinar si se trata de un valor mayor o menor, de modo que sea una ayuda para el usuario, este proceso se repetirá de maenra indefinida hasta que el usuario logre acertar el número, cuando lo adivine se romperá el bucle creado y se felicitará al usuario, mostrando además el número de intentos que le costó adivinar.
 
     import random
     
