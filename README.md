@@ -232,6 +232,9 @@ o X X X o
 
 **Deberá imprimir también la ruta que siguió. Mostrar un segundo mapa con el “camino” seguido por el robot mediante flechas**
 
+Para resolver el ejercicio, lo primero es crear una matriz, esta se define con el uso de 2 variables "i" y "j".
+
+![image](https://github.com/DiegoJGutierrezReyes/Lab-1/assets/132300202/78d358f6-1311-4718-a9c7-dd2a5346b5c3)
 
 
 
