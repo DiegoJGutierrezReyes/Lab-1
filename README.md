@@ -107,28 +107,44 @@ Para la generación de las listas es necesario implementar vectores, sin definir
   n = int(input("Numero de empleados "))
 
   #Se crean 3 listas, unoa para cada variable que se empleará, así como 1 extra para la lista final de nombre y sueldo
+  
   list_nombres = []
+  
   list_horas = []
+  
   list_salario = []
+  
   Lista = []
 
   #Se crea un for que se repetirá las mismas veces que el tamaño del vectores
+  
   #Se solicitan el nombre, costo y horas trabajadas de cada empleado
   
   for i in range(n):
+  
       nombre = str(input("Ingrese el nombre del empleado: "))
+      
       costo = float(input("Ingrese el costo por hora del empelado: "))
+      
       horas = float(input("Ingrese las horas trabajadas por el empelado: "))
       
+      
       #Se realiza la operación y se guardan en cada una de las listas creadas
+      
       total = horas * costo
+      
       list_nombres.append(nombre)
+      
       list_horas.append(horas)
+      
       list_salario.append(total)
   
   #Se imprimen los resultados de cada empleado
+  
   for i in range(n):
+  
       Lista.append(list_nombres[i] + "  $" + str(list_salario[i]))
+      
   print(Lista)
   
 
@@ -144,59 +160,100 @@ Para la generación de las listas es necesario implementar vectores, sin definir
 Para generar el tamño de la lista, se pedirá al usuario ingresar un número mayor a 10, de modo que se cree un rango entre el 1 y el valor dado por el usuario, a partir de esto se harán 2 vectores, uno para los números pares y otro para los impares, luego se realizará un proceso para discenir en que vector colocar cada uno de los números, para ello puede implementarse una división entre 2, puesto que los pares nunca tendrán residuo, mientras que los impares lo tendrán, almacenados los números en sus listas correspondientes, se realizan los procesos del promedio y la multiplicación, sumando y multiplicando los valores respectivos a cada lista, teniendo en consideración que lel resultado de la suma de los pares se dividirá entre el tamaño del vector para obtener el promedio.
 
     import numpy
+    
     #Se solicita el número 
+    
     a = int(input("Ingrese un número mayor a 10, se creará una lista de 1 hasta el valor indicado :"))
     
     #Se creará un rango entre 1 y el valor dado por el usuario
+    
     num = range(1,a+1)
     
     #Se crean 2 listas, una para los números pares y otra para los número impares
+    
     numP=[]
+    
     numI=[]
+    
     sumap=0
+    
     producto=1
+    
     x =0
     
     #Se crea un for para determinar si el número es par o impar, se hace mediante división entre 2
+    
     #Al ser par no hay residuo
+    
     #Al ser impar hay residuo 1
+    
     for i in num:
+    
         #PAR
+        
         if i%2== 0:
+        
             #Se agregan los pares
+            
             numP.append(i)
+            
             #Se suman los pares
+            
             sumap = sumap + i
     
             x = x+1
+            
         #IMPAR
+        
         if i%2!=0:
+        
             #Se agregan los impares
+            
             numI.append(i)
+            
             #Se multiplican los impares
+            
             producto = producto*i
     
     #Se realiza e imprime el proceso de promedio de los pares
+    
     print("El promedio de los números pares es:")
+
     print("(", end="")
+    
     for i in range(len(numP)):
+    
         if i != len(numP)-1:
+        
             print(numP[i], "+ ", end="")
+            
         else:
+        
             print(numP[i], ")", "/",len(numP), " = " ,end="")
+            
     promedio = sumap/len(numP)
+    
     print(promedio)
     
     
     #Se realiza e imprime el producto de los impares
+    
     print("El producto de los números impares es: ")
+
     print("(", end="")
+    
     for i in range(len(numI)):
+    
         if i != len(numP):
+        
             print(numI[i], "*", end="")
+            
         else:
+        
             print(numI[i], ")", " = " ,end="")
+            
     print(producto)
+    
     
 
     ![ejercicio4](https://github.com/DiegoJGutierrezReyes/Lab-1/assets/132300202/c5bd0395-c62f-4015-8308-b638e37503ac)
@@ -209,22 +266,35 @@ Lo primeroe s crear el rango de valores, posteriormente se pedirá al usuario in
     import random
     
     #Se genera un número aleatorio entre el 1 y el 10
+    
     numerosecreto = random.randint(1, 10) 
     
     #Se le solicita la usuario que intente adivinarlo
+    
     print("Se generó un número secreto aleatorio, adivinelo si puede: ")
+    
     a = int(input("Ingresa el numero que crees que es :" )) 
+    
     #Se crea una variable que llevará el conteo de intentos
+    
     intentos=1
     
     #Se crea un while que funcionará hasta que el usuario adivine correctamente el número
+    
     while (a!= numerosecreto):
+    
         dif = numerosecreto - a
+        
         print("El número es incorrecto: ", end="")
+        
         intentos=intentos+1
+        
         if dif > 0:
+        
             print("Es número es más alto")
+            
         else:
+        
             print("El número es mas bajo")
         #Se da al usuario otra oportunidad de adivinar
         a = int(input("Ingresa otro número :"))
